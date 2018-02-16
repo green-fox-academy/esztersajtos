@@ -10,7 +10,6 @@ let out: number = 0;
     }
 // if a is even increment out by one
 
-
 let b: number = 13;
 let out2: string = 'Sweet!';
 
@@ -25,7 +24,6 @@ let out2: string = 'Sweet!';
 // if b is between 10 and 20 set out2 to "Sweet!"
 // if less than 10 set out2 to "Less!",
 // if more than 20 set out2 to "More!"
-
 
 let c: number = 123;
 let credits: number = 100;
@@ -43,7 +41,6 @@ let isBonus: boolean = false;
 // if credits are smaller than 50,
 // and is_bonus is false decrement c by 1
 // if is_bonus is true c should remain the same
-
 
 let d: number =  8;
 let time: number = 120;
