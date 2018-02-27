@@ -5,18 +5,19 @@
 
 const fs = require('fs');
 
-let fileContent = fs.writeFileSync('my-file.txt');
+// let fileContent = fs.writeFileSync('my-file.txt');
 
 
-fileContent = `
-  I can do this!
-  I can write this!
-`;
+// fileContent = `
+//   I can do this!
+//   I can write this!
+// `;
 
 
 try {
-    fs.writeFileSync('my-file.txt', fileContent);
+	let fileContent = fs.readFileSync('my-fil.txt', 'utf-8');
+	console.log(fileContent);
 } catch(err) {
-    console.log('Unable to read file: my-file.txt');
+	console.log('Unable to read file: my-file.txt');
 }
 
