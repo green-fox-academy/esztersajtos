@@ -6,29 +6,19 @@
 
 const fs = require('fs');
 
-function lineCount(): any {
-	let fileContant = fs.readFileSync('my-file.txt', 'utf-8');
-	let numLines = 0;
-	for (let i = 1; i < fileContant.length; i++){
-	  if (fileContant[i] === '\n'){
-			numLines++;
-		}  
-	}return numLines;
+function lineCount(fileName: string): number {
+	try {
+		let fileContant = fs.readFileSync(fileName, 'utf-8');
+		let numLines = 0;
+		for (let i = 1; i < fileContant.length; i++){
+			if (fileContant[i] === '\n'){
+				numLines++;
+			}  
+		}
+		return numLines;
+	} catch {
+		return 0;
+	}
 }
 
-try {
-	let fileContant = fs.readFileSync('my-fil.txt', 'utf-8');
-	console.log(fileContant);
-} catch(error) {
-	console.log('0');
-}
-
-
-
-
-// try {
-// 	let countLine = fs.readFileSync('my-fil.txt', 'utf-8');
-// 	console.log(fileContent);
-// } catch(err) {
-// 	console.log('Unable to read file: my-file.txt');
-// }
+console.log(lineCount('my-file1.txt'));
