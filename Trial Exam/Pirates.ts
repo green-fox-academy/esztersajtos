@@ -26,10 +26,10 @@ function initializePirates(): Pirate[] {
 let pirates = initializePirates();
 
 function addLegs(item) {
-	let legs: any = 0;
+	let legs: any [] = [];
 	for (let i = 0; i < item.length; i++) {
 		if (item[i].hasWoodenLeg = true) {
-			legs += item[i].hasWoodenLeg;
+			legs += item[i].name;
 		}
 	}
 	return legs;
@@ -37,10 +37,10 @@ function addLegs(item) {
 console.log(addLegs(pirates));
 
 function addGold(input) {
-	let moreGold = 0;
+	let moreGold: any [] = [];
 	for (let j = 0; j < input.length; j++) {
 		if (input[j].gold >= 15) {
-			moreGold += input[j].gold;
+			moreGold += input[j].name;
 		}
 	}
 	return moreGold;
