@@ -8,18 +8,17 @@ const fs = require('fs');
 
 function lineCount(fileName: string) {
   try {
-	let fileContant = fs.readFileSync(fileName, 'utf-8');
-	let numLines = 0;
-		for (let i = 1; i < fileContant.length; i++){
-			if (fileContant[i] === 'a'){
-				numLines++;
-			}  
-		}
-		return numLines;
+		let fileContant = fs.readFileSync(fileName, 'utf-8');
+		let numLines = 0;
+			for (let i = 1; i < fileContant.length; i++) {
+				if (fileContant[i] === 'a') {
+					numLines++;
+				}  
+			}
+			return numLines;
 	} catch {
-		return 0;
+			return 0;
 		}
 }
-
 console.log(lineCount('afile.txt'));
 
