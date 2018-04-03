@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: left;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.item {
+  flex-wrap: inherit;
+  flex-flow: row-reverse;
+}
+
+.green {
+  width: 200px;
+  height: 200px;
+  background: rgb(13, 121, 13);
+}
+
+.yellow {
+  width: 200px;
+  height: 200px;
+  background: rgb(218, 184, 18);
+  flex-grow: 2;
+}
+
+.purple {
+  width: 200px;
+  height: 200px;
+  background: rgb(122, 9, 122);
+}
