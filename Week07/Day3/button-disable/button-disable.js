@@ -1,21 +1,14 @@
 let favorites = document.querySelectorAll('input[name="favorite"]');
 let signIn = document.querySelector('#sign');
 
-function enable() {
-  for (let i =0; i < favorites.length; i++) {
-    if (favorites[0] || favorites[1]) {
+function enableSign() {
+  signIn.disabled = false;
+}
+favorites[2].addEventListener('click', enableSign);
+favorites[0].addEventListener('click', disableSign);
+favorites[1].addEventListener('click', disableSign);
 
-    }
-  }
+function disableSign() {
+  signIn.disabled = true;
 }
 
-// function enableSign() {
-//   signIn.disabled = false;
-// }
-favorites[0].addEventListener('click', enableSign);
-
-
-// function disablesignin() {
-//   document.getElementById('sign').disabled = true;
-//   document.getElementById('sign').checked = false;
-// }
