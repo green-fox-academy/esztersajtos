@@ -16,7 +16,7 @@ function prison(myName) {
       if (myName === undefined) {
         console.log('Nobody is here anymore.');
       } else {
-        console.log(`${myName} is visited ${visit}`);
+        console.log(`${myName} is visited ${visit} time(s).`);
       }
     },
     escape: function() {
