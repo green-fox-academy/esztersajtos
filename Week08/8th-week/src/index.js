@@ -15,10 +15,18 @@ const conn = mysql.createConnection({
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.get('/', (req, res) => {
-  const sql = 'SELECT * FROM history ORDer BY date DESC LIMIT 15;';
-  conn.query(sql, (err, result) => {
+  let sql = 'SELECT * FROM history ORDer BY date DESC LIMIT 15;';
+  let queryInputs = [];
+
+  if (req.query.type !== undefined) {
+    sql = 'SELECT * FROM history Where type = ? LIMIT 15;';
+    queryInputs = [req.query.type];
+  }
+
+  conn.query(sql, queryInputs, (err, result) => {
     if (err) {
       console.log(err);
       res.sendStatus(500);
