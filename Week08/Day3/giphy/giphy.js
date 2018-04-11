@@ -9,7 +9,7 @@ giphy.onload = () => {
   
   for (let i = 0; i < dataFromGiphy.data.length; i++) {
     let img = document.createElement('img');
-    img.setAttribute('src', JSON.parse(giphy.responseText).data[i].images.fixed_height.url);
+    img.setAttribute('src', JSON.parse(giphy.responseText).data[i].images.fixed_height_still.url);
     div.appendChild(img);
 
     img.addEventListener('click', function() {
@@ -17,7 +17,7 @@ giphy.onload = () => {
     });
 
     img.addEventListener('mouseout', function() {
-      img.setAttribute('src', JSON.parse(giphy.responseText).data[i].images.fixed_height.url);
+      img.setAttribute('src', JSON.parse(giphy.responseText).data[i].images.fixed_height_still.url);
     });
   }
 }
