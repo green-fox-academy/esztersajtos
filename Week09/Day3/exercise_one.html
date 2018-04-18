@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: blueviolet;
+    }
+
+    #content {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 3fr 6fr 3fr;
+    }
+
+    #content div {
+      height: 200px;
+      margin: 5px;
+      background-color:lime;
+    }
+
+    #content div:nth-child(odd) {
+      color: white;
+      background: yellow;
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
